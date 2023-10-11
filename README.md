@@ -15,6 +15,4 @@ You should get a similar output:
 
 ### Running the code inside the container
 
-
-### Running as a Rust Binary
-![demo](https://github.com/dalmoveras/cryptography-a2/assets/125914597/110a7631-1304-438e-98a9-254f933bb3eb)
+![demo](https://github.com/dalmoveras/cryptography-a2/assets/125914597/7dfb2864-0bf2-4927-8c3d-04ac71eeed4d)
