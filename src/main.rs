@@ -18,8 +18,10 @@ fn main(){
     let plaintext: String = text_io::read!("{}\n"); 
     println!("Enter the key(d,r) [integers and comma separated]:"); 
     let key: String = text_io::read!("{}\n"); 
-
-    let r = Railfence::new();
+    let mut iter = key.splitn(2, ',');
+    let depth = iter.next().unwrap().parse::<usize>().unwrap();
+    let repeat = iter.next().unwrap().parse::<usize>().unwrap();
+    let r = Railfence::new(depth);
     let ciphertext = r.encrypt(&plaintext).unwrap();
     println!("{} ---> {}", plaintext, ciphertext);
 }
