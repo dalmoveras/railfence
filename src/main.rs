@@ -11,10 +11,8 @@ struct Args {
     repeat: i32,
 }
 
-fn main(){
-    println!("[*] Railfence Cipher - Cryptography Assignment 2 [*]");
-
-    println!("Enter the plaintext:");
+fn encryption() {
+     println!("Enter the plaintext:");
     let plaintext: String = text_io::read!("{}\n"); 
     println!("Enter the key(d,r) [integers and comma separated]:"); 
     let key: String = text_io::read!("{}\n"); 
@@ -35,4 +33,9 @@ fn main(){
         i+=1;
     }
     println!("{}", ciphertext);
+
 }
+fn main(){
+    println!("[*] Railfence Cipher - Cryptography Assignment 2 [*]");
+    encryption();
+   }
