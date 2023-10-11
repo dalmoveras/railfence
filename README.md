@@ -1,4 +1,4 @@
-# cryptography-a2
+# Assigment 2
 Second Assigment for Cryptography Class.
 
 #### Setup
