@@ -23,5 +23,5 @@ fn main(){
     let repeat = iter.next().unwrap().parse::<usize>().unwrap();
     let r = Railfence::new(depth);
     let ciphertext = r.encrypt(&plaintext).unwrap();
-    println!("{} ---> {}", plaintext, ciphertext);
+    println!("{}", ciphertext);
 }
