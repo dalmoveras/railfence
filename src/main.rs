@@ -1,3 +1,4 @@
+use figlet_rs::FIGfont;
 use text_io;
 pub mod railfence;
 
@@ -60,7 +61,11 @@ fn decryption() {
 }
 
 fn main(){
-    println!("[*] Railfence Cipher - Cryptography Assignment 2 [*]");
+    let standard_font = FIGfont::standard().unwrap();
+    let figure = standard_font.convert("Railfence Cipher");
+    assert!(figure.is_some());
+    println!("{}", figure.unwrap());
+    println!("[*] Dalmo Veras, Bruno Hideki, and Aydin Lamei - Cryptography Assignment 2 [*]");
     encryption();
     decryption();
    }
