@@ -20,8 +20,19 @@ fn main(){
     let key: String = text_io::read!("{}\n"); 
     let mut iter = key.splitn(2, ',');
     let depth = iter.next().unwrap().parse::<usize>().unwrap();
-    let repeat = iter.next().unwrap().parse::<usize>().unwrap();
+    let rounds = iter.next().unwrap().parse::<i32>().unwrap();
+    
     let r = Railfence::new(depth);
-    let ciphertext = r.encrypt(&plaintext).unwrap();
+    
+    let mut ciphertext =r.encrypt(&plaintext).unwrap();
+
+    let mut i: i32 = 0;
+    let mut current: String;
+    
+    while i < rounds {
+        current = r.encrypt(&ciphertext).unwrap();
+        ciphertext = current.to_string();
+        i+=1;
+    }
     println!("{}", ciphertext);
 }
