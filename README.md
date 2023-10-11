@@ -14,4 +14,7 @@ You should get a similar output:
 ![docker-build](https://github.com/dalmoveras/cryptography-a2/assets/125914597/788c76af-8897-49f1-b202-4b65e41b624c)
 
 ### Running the code inside the container
-![docker-run](https://github.com/dalmoveras/cryptography-a2/assets/125914597/3579f6f6-7764-4b6e-9f76-3d0064a1b676)
+
+
+### Running as a Rust Binary
+![demo](https://github.com/dalmoveras/cryptography-a2/assets/125914597/110a7631-1304-438e-98a9-254f933bb3eb)
