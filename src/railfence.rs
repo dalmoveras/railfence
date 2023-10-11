@@ -1,14 +1,10 @@
-use  crate::railfence::cipher::Cipher;
 
 pub struct Railfence {
     rails: usize,
 }
 
-impl Cipher for Railfence {
-    type Key = usize;
-    type Algorithm = Railfence;
-
-    fn new(key: usize) -> Railfence {
+impl Railfence {
+ pub fn new(key: usize) -> Railfence {
         if key == 0 {
             panic!("The key is 0.");
         }
@@ -16,7 +12,17 @@ impl Cipher for Railfence {
         Railfence { rails: key }
     }
     
-    fn encrypt(&self, message: &str) -> Result<String, &'static str> {
+    fn calc_current_rail(col: usize, total_rails: usize) -> usize {
+        let cycle = 2 * total_rails - 2;
+        if col % cycle <= cycle / 2 {
+            col % cycle
+        } else {
+            cycle - col % cycle
+        }
+    }
+
+
+ pub fn encrypt(&self, message: &str) -> Result<String, &'static str> {
        if self.rails == 1 {
             return Ok(message.to_string());
         }
@@ -36,7 +42,7 @@ impl Cipher for Railfence {
             .collect::<String>())
     }
 
-    fn decrypt(&self, ciphertext: &str) -> Result<String, &'static str> {
+   pub fn decrypt(&self, ciphertext: &str) -> Result<String, &'static str> {
        if self.rails == 1 {
             return Ok(ciphertext.to_string());
         }
@@ -71,16 +77,8 @@ impl Cipher for Railfence {
     }
 }
 
-impl Railfence {
-    fn calc_current_rail(col: usize, total_rails: usize) -> usize {
-        let cycle = 2 * total_rails - 2;
-        if col % cycle <= cycle / 2 {
-            col % cycle
-        } else {
-            cycle - col % cycle
-        }
-    }
-}
+
+
 
 #[cfg(test)]
 mod tests {

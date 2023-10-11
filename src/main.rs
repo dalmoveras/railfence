@@ -1,5 +1,7 @@
+pub mod railfence;
+
+use railfence::Railfence;
 use clap::Parser;
-use crate::railfence::Railfence;
 
 #[derive(Parser)]
 struct Args {
