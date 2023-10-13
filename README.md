@@ -1,4 +1,4 @@
-# Assigment 2
+# Cryptography Assignment 2 - Railfence Cipher
 Second Assigment for Cryptography Class.
 
 #### Setup
