@@ -1,5 +1,6 @@
 # Cryptography Assignment 2 - Railfence Cipher
-Second Assigment for Cryptography Class.
+Second Assignment for Cryptography Class.
+Group: Dalmo Veras, Bruno Hideki, and Aydin Lamei
 
 #### Setup
 Make sure you have Docker installed on your machine.
