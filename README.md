@@ -12,14 +12,20 @@ Clone the repository:
 Run: `docker build -t a2 .`
 
 You should get a similar output:
-![docker-build](https://github.com/dalmoveras/cryptography-a2/assets/125914597/788c76af-8897-49f1-b202-4b65e41b624c)
+
+![dockerbuild](https://github.com/dalmoveras/railfence/assets/125914597/5022af4e-48e4-4d0d-ba31-d76c3284304e)
+
+
+
 
 ### Running the code inside the container
+`docker run -ti a2`
 
-![demo](https://github.com/dalmoveras/cryptography-a2/assets/125914597/7dfb2864-0bf2-4927-8c3d-04ac71eeed4d)
+![dockerrun](https://github.com/dalmoveras/railfence/assets/125914597/5c3ddddd-a948-4667-b2e9-7c1959c28a33)
+
 
 ### Running the rust binary
 ```
 cargo run
 ```
-![example](https://github.com/dalmoveras/cryptography-a2/assets/125914597/8525be4d-0b5a-4945-92dd-a4ff0093f296)
+![example](https://github.com/dalmoveras/railfence/assets/125914597/25765ee1-aa35-49ff-9621-24ee764b360a)
