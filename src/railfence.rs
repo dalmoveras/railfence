@@ -95,7 +95,7 @@ mod tests {
     fn encrypt_mixed_case() {
         let message = "Cryptography Class Mostafa!";
         let r = Railfence::new(3);
-        assert_eq!("Cta sofrporpyCasMsaayghl t", r.encrypt(message).unwrap());
+        assert_eq!("Cta sofrporpyCasMsaayghl t!", r.encrypt(message).unwrap());
     }
 
     #[test]
