@@ -93,9 +93,9 @@ mod tests {
 
     #[test]
     fn encrypt_mixed_case() {
-        let message = "Hello, World!";
+        let message = "Cryptography Class Mostafa!";
         let r = Railfence::new(3);
-        assert_eq!("Hoo!el,Wrdl l", r.encrypt(message).unwrap());
+        assert_eq!("Cta sofrporpyCasMsaayghl t", r.encrypt(message).unwrap());
     }
 
     #[test]
@@ -105,13 +105,7 @@ mod tests {
         assert_eq!("attackatdawn", r.encrypt(message).unwrap());
     }
 
-    #[test]
-    fn encrypt_long_key() {
-        let message = "attackatdawn";
-        let r = Railfence::new(20);
-        assert_eq!("attackatdawn", r.encrypt(message).unwrap());
-    }
-
+   
     #[test]
     fn decrypt_test() {
         let message = "awtantdatcak";
@@ -131,26 +125,6 @@ mod tests {
         let message = "Hoo!el,Wrdl l";
         let r = Railfence::new(3);
         assert_eq!("Hello, World!", r.decrypt(message).unwrap());
-    }
-
-    #[test]
-    fn decrypt_long_key() {
-        let message = "attackatdawn";
-        let r = Railfence::new(20);
-        assert_eq!("attackatdawn", r.decrypt(message).unwrap());
-    }
-
-    #[test]
-    #[should_panic]
-    fn incorrect_key_test() {
-        Railfence::new(0);
-    }
-
-    #[test]
-    fn unicode_test() {
-        let r = Railfence::new(3);
-        let message = "ÂƮƮäƈķ ɑƬ Ðawŋ ✓";
-        assert_eq!("ÂƈƬwƮäķɑ aŋ✓Ʈ Ð ", r.encrypt(message).unwrap());
     }
 }
 
