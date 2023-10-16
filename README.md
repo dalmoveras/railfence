@@ -21,8 +21,8 @@ You should get a similar output:
 ### Running the code inside the container
 `docker run -ti a2`
 
-![dockerrun](https://github.com/dalmoveras/railfence/assets/125914597/5c3ddddd-a948-4667-b2e9-7c1959c28a33)
 
+![exec](https://github.com/dalmoveras/railfence/assets/125914597/0c250012-39d4-4c84-aaa0-33490740640b)
 
 ### Running the rust binary
 ```
